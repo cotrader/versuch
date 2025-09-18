@@ -6,7 +6,7 @@ import pandas as pd
 
 # Set up Streamlit app
 st.set_page_config(layout="wide")
-st.title("AI-Powered Technical Stock Analysis Dashboard")
+st.title("AI-Powered Technical Stock Analysis Dashboard1")
 st.sidebar.header("Configuration")
 
 
