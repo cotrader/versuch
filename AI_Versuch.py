@@ -16,7 +16,7 @@ import feedparser #News
 import matplotlib.pyplot as plt
 import sys
 #pd.set_option('display.max_colwidth', -1)
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 c1, c2, c3= st.columns((1, 1, 1))
 groesse=1500
 
