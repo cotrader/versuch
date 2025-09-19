@@ -132,9 +132,13 @@ if check_password():
         n = st.slider('Performancezeitraum:', 1, 900,360,key="5")  
         st.write(einzeltitel_isin)
         try:
-            pfad='C:\\Python\\ISIN_number\\' #Speichern der Aktien
+            #pfad='C:\\Python\\ISIN_number\\' #Speichern der Aktien
             stock=einzeltitel_isin
-            data=pd.read_pickle(pfad+str(stock)+'.pickle')    
+            #data=pd.read_pickle(pfad+str(stock)+'.pickle')
+            st.write(stock)
+            url='https://cosnnews.eu.pythonanywhere.com/static/ISIN_number_excel/'+str(stock)+'.xlsx'
+            #url='https://cosnnews.eu.pythonanywhere.com/static/ISIN_number_excel/'+str('0ZQ')+'.xlsx'
+            data= pd.read_excel(url, sheet_name="Sheet1", index_col=0, engine="openpyxl")    
             data=data[-n:]
             #data.columns = data.columns.droplevel(1) 
             # Plot candlestick chart
