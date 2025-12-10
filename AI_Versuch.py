@@ -121,7 +121,7 @@ if check_password():
     with st.expander("1: Auswahlframe"): 
         options = Instrumente.columns.unique().sort_values()#Auswahlfelder
         
-        myfields=['Name','Close','Markt','Bestand','R_1','R_20', 'R_60','Signal_SMA20','Signal_SMA20_Wechsel','20-Day_Volatility','Volatility_Ratio','Datum','Watchlist','Allocation']
+        myfields=['Name','Close','Markt','Bestand','R_1','R_20', 'R_60','Signal_SMA20','Signal_SMA20_Wechsel','20-Day_Volatility','Volatility_Ratio','Datum','Watchlist']
         selected_options = st.multiselect("Select the rows you want to see:", options,default=myfields)
         st.write('das ist der  Frame mit Auswahlfeldern',option)
         st.write(bearb_select[selected_options])
@@ -269,4 +269,5 @@ if check_password():
             st.write(finviz)
             st.write(marketscreener)
             st.write(coinlink)
+
 
