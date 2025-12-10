@@ -65,7 +65,7 @@ if check_password():
     pfad_load,pfad,Instrumente,stock_data=load_data()
 
     #Auswahlfelder
-    option = st.sidebar.radio('Auswahl:',['Branche','Einzeltitel','Portfolio','Watchlist','Allocation'],index=1)
+    option = st.sidebar.radio('Auswahl:',['Branche','Einzeltitel','Portfolio','Watchlist'],index=1)
 
     #Ermittlung der verfügbaren Branchen
     branche=Instrumente['Markt'].dropna()
@@ -269,5 +269,6 @@ if check_password():
             st.write(finviz)
             st.write(marketscreener)
             st.write(coinlink)
+
 
 
